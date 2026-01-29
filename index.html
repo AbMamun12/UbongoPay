@@ -3,187 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMI Payment System - Download APK</title>
+    <title>UbongoPay | Premium EMI Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas>
+    
     <header class="hero">
         <div class="hero-content">
-            <h1>EMI Payment System</h1>
-            <p>Manage your EMI payments effortlessly with our Flutter app. Secure, fast, and user-friendly.</p>
-            <a href="#download" class="cta-btn">Get Started</a>
+            <div class="logo-text">UBONGO<span>PAY</span></div>
+            <h1>The Gold Standard of <span>EMI Management</span></h1>
+            <p>Experience a sophisticated, secure, and seamless way to track your installments. Built for the modern user who demands excellence.</p>
+            <div class="hero-btns">
+                <a href="#download" class="cta-btn primary">Get the App</a>
+                <a href="#features" class="cta-btn secondary">Explore Features</a>
+            </div>
         </div>
     </header>
+
     <main>
-        <section class="about fade-in">
-            <h2>About Our App</h2>
-            <p>Our EMI Payment System app is designed to simplify loan management. Calculate EMIs, track payments, and receive reminders all in one place.</p>
+        <section class="about fade-in" id="about">
+            <div class="section-badge">Our Mission</div>
+            <h2>Revolutionizing Financial Independence</h2>
+            <p>UbongoPay transforms complex loan management into an elegant, intuitive experience. We empower you with real-time insights and secure workflows, ensuring you're always in command of your financial commitments.</p>
         </section>
-        <section class="features fade-in">
-            <h2>Key Features</h2>
+
+        <section class="features fade-in" id="features">
+            <div class="section-badge">Key Features</div>
+            <h2>Precision-Engineered for You</h2>
             <div class="feature-grid">
+                <!-- 1. Secure Authentication -->
                 <div class="feature-item">
-                    <h3>Easy EMI Calculation</h3>
-                    <p>Quickly calculate your EMI amounts with our intuitive calculator.</p>
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure Authentication</h3>
+                    <p>Ironclad security for your financial peace of mind.</p>
+                    <ul>
+                        <li><strong>Phone-based Login</strong>: Fast and secure auth via Firebase.</li>
+                        <li><strong>Session Management</strong>: Efficiently handled authentication states.</li>
+                    </ul>
                 </div>
+                <!-- 2. EMI Tracking & Repayment -->
                 <div class="feature-item">
-                    <h3>Secure Payments</h3>
-                    <p>Bank-grade security for all your payment transactions.</p>
+                    <div class="feature-icon">💳</div>
+                    <h3>EMI Tracking & Repayment</h3>
+                    <p>Total transparency throughout your repayment journey.</p>
+                    <ul>
+                        <li><strong>Real-time Monitoring</strong>: Instant status updates on payments.</li>
+                        <li><strong>Due Selection</strong>: Intuitively select upcoming installments.</li>
+                        <li><strong>Secure Repayment</strong>: A smooth, multi-step payment flow.</li>
+                    </ul>
                 </div>
+                <!-- 3. Professional Invoices -->
                 <div class="feature-item">
-                    <h3>User-Friendly Interface</h3>
-                    <p>Simple and clean design for a seamless user experience.</p>
+                    <div class="feature-icon">📄</div>
+                    <h3>Professional Invoices</h3>
+                    <p>Beautifully designed records of every transaction.</p>
+                    <ul>
+                        <li><strong>PDF Generation</strong>: High-quality invoices on-the-fly.</li>
+                        <li><strong>Easy Sharing</strong>: Download and share instantly from the app.</li>
+                        <li><strong>Transaction History</strong>: Full management of your payment logs.</li>
+                    </ul>
                 </div>
+                <!-- 4. Smart Notifications -->
                 <div class="feature-item">
-                    <h3>Real-Time Notifications</h3>
-                    <p>Get instant alerts for payment due dates and confirmations.</p>
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Notifications</h3>
+                    <p>Contextual alerts that keep you perfectly on track.</p>
+                    <ul>
+                        <li><strong>Push Notifications</strong>: Stay updated via Firebase (FCM).</li>
+                        <li><strong>Local History</strong>: SQLite storage for offline message review.</li>
+                        <li><strong>Direct Access</strong>: Tap to jump into transaction details.</li>
+                    </ul>
+                </div>
+                <!-- 5. Connectivity Guard -->
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Connectivity Guard</h3>
+                    <p>Reliable performance, even when you're offline.</p>
+                    <ul>
+                        <li><strong>Auto Detection</strong>: Intelligence that monitors network health.</li>
+                        <li><strong>Offline Recovery</strong>: Easy "Try Again" mode for recovery.</li>
+                    </ul>
                 </div>
             </div>
         </section>
+
         <section class="testimonials fade-in">
-            <h2>What Our Users Say</h2>
+            <div class="section-badge">User Perspectives</div>
+            <h2>Trusted by Thousands</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-item">
-                    <p>"This app has made managing my EMIs so much easier!"</p>
-                    <cite>- John Doe</cite>
+                    <div class="quote-icon">“</div>
+                    <p>UbongoPay has completely streamlined my repayments. It's the most polished financial app I've used.</p>
+                    <div class="author-info">
+                        <strong>Arjun Mehta</strong>
+                        <span>Business Owner</span>
+                    </div>
                 </div>
                 <div class="testimonial-item">
-                    <p>"Secure and reliable. Highly recommended."</p>
-                    <cite>- Jane Smith</cite>
+                    <div class="quote-icon">“</div>
+                    <p>The PDF invoice feature is a lifesaver for my records. Elegant, fast, and incredibly reliable.</p>
+                    <div class="author-info">
+                        <strong>Elena Rodriguez</strong>
+                        <span>Freelance Consultant</span>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section class="screenshots fade-in">
-            <h2>App Screenshots</h2>
+            <div class="section-badge">Visual Showcase</div>
+            <h2>Elegant Interface</h2>
             <div class="carousel-container">
-                <button class="carousel-btn prev-btn" aria-label="Previous screenshots">&larr;</button>
+                <button class="carousel-btn prev-btn" aria-label="Previous">&larr;</button>
                 <div class="screenshot-gallery">
-                <div class="screenshot-item">
-                    <img src="splash_screen.jpeg" alt="Splash Screen">
-                    <div class="screenshot-content">
-                        <h3>Splash Screen</h3>
-                        <p>The welcoming first screen of our EMI Payment app</p>
-                    </div>
+                    <div class="screenshot-item"><img src="assests/splash_screen.jpeg" alt="Splash"></div>
+                    <div class="screenshot-item"><img src="assests/sign_up_screen.jpeg" alt="Sign Up"></div>
+                    <div class="screenshot-item"><img src="assests/me_screen.jpeg" alt="Profile"></div>
+                    <div class="screenshot-item"><img src="assests/my_order_screen.jpeg" alt="Orders"></div>
+                    <div class="screenshot-item"><img src="assests/due_installments_screen.jpeg" alt="Dues"></div>
+                    <div class="screenshot-item"><img src="assests/installment_terms_screen.jpeg" alt="Terms"></div>
+                    <div class="screenshot-item"><img src="assests/payment_screen.jpeg" alt="Payment"></div>
+                    <div class="screenshot-item"><img src="assests/payment_successful_screen.jpeg" alt="Success"></div>
+                    <div class="screenshot-item"><img src="assests/repay_screen.jpeg" alt="Repay"></div>
+                    <div class="screenshot-item"><img src="assests/repay_before_due_screen.jpeg" alt="Early Repayment"></div>
+                    <div class="screenshot-item"><img src="assests/payment_records_screen.jpeg" alt="Records"></div>
+                    <div class="screenshot-item"><img src="assests/transaction_history_screen.jpeg" alt="History"></div>
+                    <div class="screenshot-item"><img src="assests/no_internet_connection_scren.jpeg" alt="Offline"></div>
                 </div>
-                <div class="screenshot-item">
-                    <img src="sign_up_screen.jpeg" alt="Sign Up Screen">
-                    <div class="screenshot-info">
-                        <h3>Sign Up</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="me_screen.jpeg" alt="Profile Screen">
-                    <div class="screenshot-info">
-                        <h3>Profile</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="my_order_screen.jpeg" alt="My Orders Screen">
-                    <div class="screenshot-info">
-                        <h3>My Orders</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="due_installments_screen.jpeg" alt="Due Installments Screen">
-                    <div class="screenshot-info">
-                        <h3>Due Installments</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="installment_terms_screen.jpeg" alt="Installment Terms Screen">
-                    <div class="screenshot-info">
-                        <h3>Installment Terms</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="payment_screen.jpeg" alt="Payment Screen">
-                    <div class="screenshot-info">
-                        <h3>Payment</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="payment_successful_screen.jpeg" alt="Payment Successful Screen">
-                    <div class="screenshot-info">
-                        <h3>Payment Success</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="repay_screen.jpeg" alt="Repay Screen">
-                    <div class="screenshot-info">
-                        <h3>Repay</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="repay_before_due_screen.jpeg" alt="Repay Before Due Screen">
-                    <div class="screenshot-info">
-                        <h3>Early Repayment</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="payment_records_screen.jpeg" alt="Payment Records Screen">
-                    <div class="screenshot-info">
-                        <h3>Payment Records</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="transaction_history_screen.jpeg" alt="Transaction History Screen">
-                    <div class="screenshot-info">
-                        <h3>Transaction History</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="privacy_policy_screen_1.jpeg" alt="Privacy Policy Screen 1">
-                    <div class="screenshot-info">
-                        <h3>Privacy Policy</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="terms_and_scondition_screen_1.jpeg" alt="Terms and Conditions Screen 1">
-                    <div class="screenshot-info">
-                        <h3>Terms & Conditions</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="no_internet_connection_scren.jpeg" alt="No Internet Connection Screen">
-                    <div class="screenshot-info">
-                        <h3>Offline Mode</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="privacy_policy_screen_2.jpeg .jpeg" alt="Privacy Policy Screen 2">
-                    <div class="screenshot-info">
-                        <h3>Privacy Policy 2</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="privacy_policy_screen_3.jpeg .jpeg" alt="Privacy Policy Screen 3">
-                    <div class="screenshot-info">
-                        <h3>Privacy Policy 3</h3>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="terms_and_scondition_screen_2.jpeg .jpeg" alt="Terms and Conditions Screen 2">
-                    <div class="screenshot-info">
-                        <h3>Terms & Conditions 2</h3>
-                    </div>
-                </div>
-                </div>
-                <button class="carousel-btn next-btn" aria-label="Next screenshots">&rarr;</button>
+                <button class="carousel-btn next-btn" aria-label="Next">&rarr;</button>
             </div>
         </section>
+
         <div id="lightbox" class="lightbox">
             <span class="lightbox-close">&times;</span>
             <img class="lightbox-content" id="lightbox-img">
         </div>
+
         <section id="download" class="download fade-in">
-            <h2>Download Now</h2>
-            <p>Get the latest version of our EMI Payment System app and start managing your payments today.</p>
-            <a href="emi_payment_system.apk" download class="download-btn">Download APK</a>
+            <div class="download-container">
+                <div class="section-badge">Ready to Start?</div>
+                <h2>Elevate Your Experience</h2>
+                <p>Join the future of EMI payments. Download the UbongoPay application today.</p>
+                <div class="download-btns">
+                    <a href="UbongoPay EMi System.apk" download class="download-btn">
+                        <span class="btn-icon">📦</span>
+                        <div class="btn-text">
+                            <small>Download Now</small>
+                            <span>UbongoPay v1.0 (APK)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 EMI Payment System. All rights reserved.</p>
+        <p>&copy; 2026 UbongoPay Ecosystem. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
